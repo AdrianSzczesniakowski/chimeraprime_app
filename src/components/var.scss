@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+$main-font: 'Roboto', sans-serif;
+$main-color: #232323;
+$second-color: #9b9b9b;
+$invalid-color: #a60b00;
+$main-text-color: #fff;
+$second-text-color: $main-color;
+
+$breakPoint-1: 1260px;
+$breakPoint-2: 991px;
+$breakPoint-3: 885px;
+$breakPoint-4: 465px;
+
+%tab {
+  border: 2px solid $second-color;
+  color: $second-color;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: flex;
+  background: transparent;
+  outline: none;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1em;
+  cursor: pointer;
+  margin: 0 5px;
+
+  &:hover {
+    border-color: $second-color;
+    color: $main-text-color;
+    background: $second-color;
+  }
+
+  &.active {
+    border-color: $main-color;
+    color: $main-text-color;
+    background: $main-color;
+  }
+}

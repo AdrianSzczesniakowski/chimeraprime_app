@@ -1,0 +1,52 @@
+@import "../var";
+
+
+.songs {
+  margin: 30px 0;
+  width: 100%;
+  animation: appear ease-in-out .5s;
+
+  thead {
+    th {
+      padding: 25px 0;
+      background: $main-color;
+      color: $main-text-color;
+
+      &:first-child {
+        border-top-left-radius: 10px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 10px;
+      }
+    }
+  }
+
+  tbody {
+    border: 2px solid $main-color;
+
+    td {
+      padding: 15px 5px;
+      border-bottom: 2px solid $main-color;
+
+      &:first-child {
+        border-left: 1px solid $main-color;
+      }
+
+      &:last-child {
+        border-right: 1px solid $main-color;
+      }
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}

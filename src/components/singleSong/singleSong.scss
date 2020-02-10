@@ -1,0 +1,47 @@
+@import "../var";
+
+.singleSong {
+
+}
+
+.singleSong-title {
+  font-size: 19px;
+  line-height: 1.2em;
+  @media (max-width: $breakPoint-4){
+    font-size: 12px;
+  }
+}
+
+.singleSong-artist {
+  @extend .singleSong-title;
+}
+
+.singleSong-tabs {
+  width: 470px;
+  @media (max-width: $breakPoint-4){
+    width: auto;
+  }
+}
+
+.singleSong-tabs-row {
+  display: flex;
+  @media (max-width: $breakPoint-4){
+    flex-wrap: wrap;
+  }
+}
+
+.singleSong-tab {
+  @extend %tab;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: lowercase;
+  margin: 0 5px;
+  @media (max-width: $breakPoint-2){
+    font-size: 14px;
+  }
+  @media (max-width: $breakPoint-4){
+    font-size: 12px;
+    margin: 5px 0;
+  }
+}

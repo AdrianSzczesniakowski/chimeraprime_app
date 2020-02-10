@@ -1,0 +1,110 @@
+@import "../var";
+
+.form {
+  width: 100%;
+  max-width: $breakPoint-3;
+  margin: 0 auto;
+
+  @media (max-width: $breakPoint-3) {
+    max-width: 100%;
+  }
+
+  .form-field {
+    width: 100%;
+    position: relative;
+    margin: 10px 0;
+    display: flex;
+
+    p {
+      position: absolute;
+      font-size: 22px;
+      line-height: 1em;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      color: $main-color;
+      font-weight: bold;
+      transition: all ease-in-out .2s;
+    }
+
+    .form-input {
+      padding: 15px 0 15px 10px;
+      font-size: 22px;
+      line-height: 1em;
+      width: 100%;
+      border: none;
+      background: transparent;
+      border-bottom: 2px solid $second-color;
+      transition: border-bottom-color ease-in-out .2s;
+      box-shadow: 0 0 0 30px $main-text-color inset;
+
+      &:focus {
+        outline: none;
+        background: transparent;
+      }
+
+    }
+
+    &.active {
+      p {
+        font-size: 14px;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        font-weight: bold;
+      }
+
+      .form-input {
+        border-bottom: 2px solid $main-color;
+      }
+    }
+
+    &.invalid {
+      animation: shake ease-in-out .7s;
+
+      p {
+        color: $invalid-color;
+      }
+
+      .form-input {
+        border-bottom-color: $invalid-color;
+      }
+    }
+  }
+
+  .btn {
+    padding: 10px 30px;
+    outline: none;
+    background: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1em;
+    border: 2px solid $main-color;
+    color: $main-color;
+    background-color: transparent;
+    transition: background-color ease-in-out .2s, color ease-in-out .3s;
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+
+    &:hover {
+      background-color: $main-color;
+      color: $main-text-color;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0px)
+    }
+    33% {
+      transform: translateX(20px)
+    }
+    66% {
+      transform: translateX(-20px)
+    }
+    100% {
+      transform: translateX(0px)
+    }
+  }
+}
